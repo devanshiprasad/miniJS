@@ -15,7 +15,6 @@ reset.addEventListener("click",function(){
 
 pastel.addEventListener("click",function(){
     const pastelColor = getPastelColor();
-    //console.log(pastelColor);
 
     color.textContent = pastelColor;
     document.body.style.backgroundColor = pastelColor;
@@ -25,8 +24,6 @@ btn.addEventListener("click",function(){
     for(let i=0;i<6;i++){
         hexColor += hex[getRandomNumber()];
     }
-    console.log(hexColor);
-
     color.textContent =hexColor;
     document.body.style.backgroundColor =hexColor;
 })
@@ -36,8 +33,8 @@ function getRandomNumber() {
 }
 
 function getPastelColor() {
-    const r = Math.floor((Math.random() * 127) + 127); // Random value between 127 and 254
-    const g = Math.floor((Math.random() * 127) + 127); // Random value between 127 and 254
-    const b = Math.floor((Math.random() * 127) + 127); // Random value between 127 and 254
+    const r = Math.floor((Math.random() * 127) + 127); 
+    const g = Math.floor((Math.random() * 127) + 127); 
+    const b = Math.floor((Math.random() * 127) + 127); 
     return `rgb(${r}, ${g}, ${b})`;
 }
